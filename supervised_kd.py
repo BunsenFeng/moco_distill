@@ -71,7 +71,7 @@ if __name__ == "__main__":
                 # remove the swarm_base_path directory
                 shutil.rmtree(hyperparameters["swarm_base_path"], ignore_errors=True)
             
-            os.system(f"python main.py -c {os.path.join(run_path, 'multi_devonly_config.json')}")
+            os.system(f"python -m model_collaboration.main -c {os.path.join(run_path, 'multi_devonly_config.json')}")
 
             # identify the log file
             for file in os.listdir("model_collaboration/logs/"):
@@ -130,7 +130,7 @@ if __name__ == "__main__":
             with open(os.path.join(run_path, "single_config.json"), "w") as f:
                 json.dump(single_config, f, indent=4)
 
-            os.system(f"python main.py -c {os.path.join(run_path, 'single_config.json')}")
+            os.system(f"python -m model_collaboration.main -c {os.path.join(run_path, 'single_config.json')}")
 
             # identify the file
             simple_model_name = model_name.split("/")[-1]
@@ -171,7 +171,7 @@ if __name__ == "__main__":
             # remove the swarm_base_path directory
             shutil.rmtree(hyperparameters["swarm_base_path"], ignore_errors=True)
 
-        os.system(f"python main.py -c {os.path.join(run_path, 'multi_config.json')}")
+        os.system(f"python -m model_collaboration.main -c {os.path.join(run_path, 'multi_config.json')}")
 
         # identify the file
         for file in os.listdir("model_collaboration/logs/"):
