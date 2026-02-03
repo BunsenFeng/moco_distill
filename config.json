@@ -1,0 +1,19 @@
+{
+    "method": "text_multiagent_refine",
+    "task": "blend",
+    "task_type": "multiple_choice",
+    "gpu_ids": [0,1,2],
+    "model_names": [
+        "bunsenfeng/yuru_qw_wizardlm",
+        "bunsenfeng/yuru_qw_sharegpt",
+        "bunsenfeng/yuru_qw_oasst1"
+    ],
+    "rounds": 3,
+    "hyperparameters": {
+    "max_response_length": 512,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "batch_size": 32,
+    "round": 1
+    }
+}

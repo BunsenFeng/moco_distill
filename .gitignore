@@ -1,3 +1,8 @@
+*.json
+!config.json
+logs/*
+!logs/readme.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
