@@ -5,10 +5,10 @@ import torch
 import shutil
 import argparse
 import importlib
-from data import eval
+from model_collaboration.data import eval
 from multiprocessing import Pool
-from utils import distributed_sft
-from method import distributed_generation
+from model_collaboration.utils import distributed_sft
+from model_collaboration.method import distributed_generation
 
 if __name__ == "__main__":
     
@@ -74,9 +74,9 @@ if __name__ == "__main__":
             os.system(f"python main.py -c {os.path.join(run_path, 'multi_devonly_config.json')}")
 
             # identify the log file
-            for file in os.listdir("logs/"):
+            for file in os.listdir("model_collaboration/logs/"):
                 if file.startswith(f"{task}_devonly_{len(model_names)}") and (file.endswith(f"_{method_name}.json") or file.endswith(f"_{method_name.split('_')[-1]}.json")):
-                    log_filename = os.path.join("logs/", file)
+                    log_filename = os.path.join("model_collaboration/logs/", file)
                     break
             # move the log file to the run path
             shutil.move(log_filename, os.path.join(run_path, "multi_devonly_" + str(round_idx) + ".json"))
@@ -134,9 +134,9 @@ if __name__ == "__main__":
 
             # identify the file
             simple_model_name = model_name.split("/")[-1]
-            for file in os.listdir("logs/"):
+            for file in os.listdir("model_collaboration/logs/"):
                 if file.startswith(f"{task}_{simple_model_name}") and file.endswith("_single_model.json"):
-                    log_filename = os.path.join("logs/", file)
+                    log_filename = os.path.join("model_collaboration/logs/", file)
                     break
             with open(log_filename, "r") as f:
                 logs = json.load(f)
@@ -174,9 +174,9 @@ if __name__ == "__main__":
         os.system(f"python main.py -c {os.path.join(run_path, 'multi_config.json')}")
 
         # identify the file
-        for file in os.listdir("logs/"):
+        for file in os.listdir("model_collaboration/logs/"):
             if file.startswith(f"{task}_{len(model_names)}") and file.endswith(f"_{method_name}.json") or file.endswith(f"_{method_name.split('_')[-1]}.json"):
-                log_filename = os.path.join("logs/", file)
+                log_filename = os.path.join("model_collaboration/logs/", file)
                 break
         with open(log_filename, "r") as f:
             logs = json.load(f)
