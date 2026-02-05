@@ -57,7 +57,12 @@ The settings we used in the paper:
 If this repository is useful for your research, please consider citing:
 
 ```
-// moco reference
+@article{feng2026moco,
+  title={MoCo: A One-Stop Shop for Model Collaboration Research},
+  author={Feng, Shangbin and Bai, Yuyang and Yang, Ziyuan and Wang, Yike and Tan, Zhaoxuan and Yan, Jiajie and Lei, Zhenyu and Ding, Wenxuan and Shi, Weijia and Wang, Haojin and others},
+  journal={arXiv preprint arXiv:2601.21257},
+  year={2026}
+}
 
 // distill reference
 ```
