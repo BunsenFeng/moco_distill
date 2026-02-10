@@ -64,5 +64,10 @@ If this repository is useful for your research, please consider citing:
   year={2026}
 }
 
-// distill reference
+@article{feng2026single,
+  title={The Single-Multi Evolution Loop for Self-Improving Model Collaboration Systems},
+  author={Feng, Shangbin and Panaganti, Kishan and Tsvetkov, Yulia and Yu, Wenhao},
+  journal={arXiv preprint arXiv:2602.05182},
+  year={2026}
+}
 ```
