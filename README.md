@@ -1,6 +1,6 @@
 # moco_distill
 
-The code repository for [The Single-Multi Evolution Loop for Self-Improving Model Collaboration Systems](./), based on the model collaboration algoritgms in [MoCo](https://github.com/BunsenFeng/model_collaboration).
+The code repository for [The Single-Multi Evolution Loop for Self-Improving Model Collaboration Systems](./), based on the model collaboration algorithms in [MoCo](https://github.com/BunsenFeng/model_collaboration).
 
 ## Quick Start
 
